@@ -33,8 +33,8 @@ export class FornecedorService {
   }
 
   // Obtém um fornecedor pelo ID
-  readById(id: string): Observable<Fornecedor> {
-    const url = `${this.baseUrl}/${id}`;
+  readById(forId: string): Observable<Fornecedor> {
+    const url = `${this.baseUrl}/${forId}`;
     return this.http.get<Fornecedor>(url);
   }
 
@@ -45,8 +45,8 @@ export class FornecedorService {
   }
 
   // Exclui um fornecedor pelo ID
-  delete(id: number): Observable<Fornecedor> {
-    const url = `${this.baseUrl}/${id}`;
+  delete(forId: number): Observable<Fornecedor> {
+    const url = `${this.baseUrl}/${forId}`;
     return this.http.delete<Fornecedor>(url);
   }
 }

@@ -26,11 +26,11 @@ export class ClienteDeleteComponent {
   deleteCliente(): void {
     this.clienteService.delete(this.cliente.cliId!).subscribe(() =>{
     this.clienteService.showMessage('Cliente excluido com sucesso!')  
-    this.router.navigate(['/clientes'])
+    this.router.navigate(['/cliente'])
     })
   }
 
   cancel(): void{
-    this.router.navigate(['/clientes'])
+    this.router.navigate(['/cliente'])
   }
 }
